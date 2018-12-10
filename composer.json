@@ -1,0 +1,24 @@
+{
+    "name": "zed/block",
+    "description": "a php7 container implemention",
+    "type": "library",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "zed",
+            "email": "zedsmail@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zed\\Block\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
