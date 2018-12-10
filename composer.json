@@ -1,6 +1,6 @@
 {
     "name": "zed/block",
-    "description": "a php7 container implemention",
+    "description": "dependency injection container for php7.2+",
     "type": "library",
     "license": "WTFPL",
     "authors": [
