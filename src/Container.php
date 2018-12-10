@@ -63,7 +63,11 @@ class Container implements ContainerInterface, \ArrayAccess
 
         $item = $this->items[$id];
 
-        $object = $this->build($item);
+        if (!is_object($item['value']) || $item['value'] instanceof \Closure) {
+            $object = $this->build($item);
+        } else {
+            $object = $item['value'];
+        }
 
         if ($item['single']) {
             $this->singles[$id] = $object;

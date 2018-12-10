@@ -122,6 +122,17 @@ class ContainerTest extends TestCase
         $this->assertInstanceOf(TestClass::class, $object);
         $this->assertEquals('hello', $object->sayHello());
     }
+
+    /**
+     * @throws ReflectionException
+     */
+    public function testObject()
+    {
+        $this->container->set(TestClass::class, new TestClass());
+        $object = $this->container->get(TestClass::class);
+        $this->assertInstanceOf(TestClass::class, $object);
+        $this->assertEquals('hello', $object->sayHello());
+    }
 }
 
 class TestClass
